@@ -1,29 +1,30 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-
-  int i, n;
-  bool is_prime = true;
-
-  cout << "Enter a positive integer: ";
-  cin >> n;
-
-  if (n == 0 || n == 1) {
-    is_prime = false;
+int main()
+{
+ bool prime = true;
+ int i,n,z;
+ cout<<"Enter i:\n" <<"Enter n:";
+ cin>>i>>n;
+ while (i<n)
+ {
+  prime = true;
+  if (i == 0 || i == 1)
+  {
+   prime = false;
   }
-
-  for (i = 2; i <= n/2; ++i) {
-    if (n % i == 0) {
-      is_prime = false;
+    for (z = 2; z <= i/2 ; z++)
+  {
+   if (i % z == 0 )
+    {
+      prime = false;
       break;
     }
   }
-
-  if (is_prime)
-    cout << n << " is a prime number";
-  else
-    cout << n << " is not a prime number";
-
+    if (prime)
+     cout <<i<<"-" ;
+       i++;
+ }
   return 0;
 }
